@@ -1,5 +1,5 @@
 // Global object to hold filter values
-const API_BASE_URL = "http://3.108.234.253";
+const API_BASE_URL = "http://52.66.7.65";
 let filters = {
   experience: 0,
   job_type: "Full-time",
