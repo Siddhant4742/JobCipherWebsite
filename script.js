@@ -35,7 +35,7 @@ document.getElementById("uploadButton").addEventListener("click", async function
 
   try {
     // Extract resume data
-    const extractResponse = await fetch("${API_BASE_URL}:5001/extract", {
+    const extractResponse = await fetch("http://52.66.7.65:5001/extract", {
       method: "POST",
       mode: "cors",
       body: formData,
@@ -99,7 +99,7 @@ document.getElementById("uploadButton").addEventListener("click", async function
     statusElement.textContent = "Searching for Jobs...";
 
     // Call job search API
-    const jobResponse = await fetch("${API_BASE_URL}:5000/job-search", {
+    const jobResponse = await fetch("http://52.66.7.65:5000/job-search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(jobData),
@@ -212,7 +212,7 @@ document.getElementById("getReviewsButton").addEventListener("click", function (
 
 
   // Call your Flask API for reviews (update URL if needed)
-  fetch("${API_BASE_URL}:5002/get_reviews", {
+  fetch("http://52.66.7.65:5002/get_reviews", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ company_name: companyReview })
